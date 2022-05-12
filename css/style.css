@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oleo+Script+Swash+Caps:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    background-color: #ffccff;
+
+}
+
+h2 {
+    color: #cc99ff;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search {
+    position: relative;
+}
+
+.search i {
+    position: absolute;
+    top: 21%;
+    right: 3%;
+}
+
+.search input {
+    box-shadow: 0 0 15px #d9b3ff;
+    border: 2px solid #d9b3ff;
+    box-sizing: border-box;
+    outline: none;
+    padding-left: 15px;
+    font-size: 20px;
+    color: #9933ff;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    box-shadow: 0 0 8px blueviolet;
+    border: 2px solid #9933ff;
+}
+
+#for_search {
+    width: 360px;
+    height: 55px;
+    color: #9933ff;
+}
+
+
+
+
+.button:active {
+    transform: translateY(1px);
+}
+
+
+header {
+
+    border-bottom: 3px solid #9933ff;
+}
+
+
+.container {
+    width: 95%;
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navbar h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.images{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+
+
+@media (max-width:768px){
+    .navbar{
+        justify-content: center;
+    }
+}
