@@ -40,7 +40,7 @@ h2 {
     outline: none;
     padding-left: 15px;
     font-size: 20px;
-    color: #9933ff;
+    -webkit-text-fill-color: #cc99ff;
     border-radius: 100px;
     margin-bottom: 10px;
 }
@@ -53,7 +53,7 @@ input:focus {
 #for_search {
     width: 360px;
     height: 55px;
-    color: #9933ff;
+    
 }
 
 
