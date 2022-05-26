@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oleo+Script+Swash+Caps:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Montserrat&family=Oleo+Script+Swash+Caps:wght@700&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -9,16 +9,26 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Oleo Script Swash Caps', cursive;
-    background-color: #ffccff;
+    /*background-color: #ffccff;*/
+    background-image: url(../img/1.gif);
+    background-size:100%;
+    background-position: repeat-y;
+    background-attachment: fixed;
 
 }
 
 .for_h2 {
-    color: #cc99ff;
+    background: -webkit-linear-gradient(#ffccff, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .dark-mode {
-    background-color: #e699ff;
-    color:pink;
+    background-image: url(../img/2.gif);
+    background-size:100%;
+    background-position: repeat-y;
+    background-attachment: fixed;
+    color:#ffffff;
   }
 
 
@@ -43,8 +53,14 @@ body {
 }
 .search i {
     position: absolute;
-    top: 17%;
-    right: 3%;
+    top: 25%;
+    right: 7%;
+    font-size: 28px;
+    background: -webkit-linear-gradient(#ff66cc, #aa80ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
 }
 
 .search input {
@@ -57,6 +73,9 @@ body {
     -webkit-text-fill-color: #cc99ff;
     border-radius: 100px;
     margin-bottom: 10px;
+    font-family: 'Macondo', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Oleo Script Swash Caps', cursive;
 }
 
 input:focus {
@@ -96,7 +115,7 @@ input:focus {
 
 
 
-.button:active {
+#buttonn:active {
     transform: translateY(1px);
 }
 
@@ -131,7 +150,43 @@ header {
     width:100%;
 }
 
+#zoom{
+    animation: main 3s;
+    transform-origin: 100% 50%;
+}
 
+
+@keyframes main {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+#right{
+    margin-right: 10px;
+    animation: main 3s;
+    transform-origin: 100% 50%;
+    background: -webkit-linear-gradient(#ff99ff, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+.images{
+   
+    width:300px;
+    height:300px;
+    background-position: 50% 50%;
+    margin-top: 150px;
+    background-size: cover;
+    border-radius: 2px;
+
+}
 
 @media (max-width:768px){
     .navbar{

@@ -1,41 +1,86 @@
 let for_search = document.querySelector("#for_search")
 let images=document.getElementsByClassName("images")
 let container=document.getElementsByClassName("container")
-let button=document.getElementById("buttonn")
+let button2=document.getElementById("buttonn")
+let for_h2=document.querySelector(".for_h2")
+let button=document.getElementById("button")
+let img=document.getElementsByClassName("img")[0]
 
+for_search.addEventListener("keydown",function(event){
+    if(event.key==="Enter"){
+        search()
+    }
+})
 
-//window.addEventListener("load", dayNight)
+function search(){
+  removeImg()
+   // const url = 'https://api.unsplash.com/search/photos?query='+for_search.value+'&per_page=9&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo';
+    fetch(url)
+    .then(response=>{
+        if(response.ok)
+        return response.json();
+        else{
+            alert(response.status)
+        }
+    })
 
-function search_img() {
-
+    .then(data=>{
+       let images=[];
+        for(let i=0; i<data.results.length; i++){
+            images[i]=document.createElement('div');
+            images[i].className="images";
+            images[i].style.backgroundImage="url('+data.results[i].urls.raw+')";
+            images[i].addEventListener('dblclick',function(){
+                window.open(data.results[i].links.download,'_blank')
+            })
+            img.appendChild(images[i])
+        }
+    })
 }
 
 
+function removeImg(){
+    img.innerHTML="";
+}
+
 /*
+window.addEventListener("load", dayNight)
+
 function dayNight() {
     let date = new Date();
     let hour = date.getHours();
 
     if (hour >= 7 && hour <= 19) {
-        document.h2.style.color= "#e699ff"
-        //document.body.style.backgroundColor = ""
+        for_h2.style.color= "pink"
+        //document.body.style.background = "#e699ff";
+        document.body.style.backgroundImage="url('img/1.gif')";
+        document.body.style.backgroundRepeat = "repeat-y";
+        document.body.style.backgroundSize = "100%";
+        document.body.style.backgroundAttachment="fixed";
         
     }
     else {
-        document.body.style.color = "pink"
-        document.body.style.backgroundColor = "#e699ff"
+        for_h2.color = "#e699ff"
+       // document.body.style.background = "#pink"
+       document.body.style.backgroundImage="url('img/2.gif')";
+       document.body.style.backgroundRepeat = "repeat-y";
+       document.body.style.backgroundSize = "100%";
+       document.body.style.backgroundAttachment="fixed";
     }
 
 
 }
+
 */
 
-
-button.addEventListener("click", ()=>{
+button2.addEventListener("click", ()=>{
     let element=document.body
     element.classList.toggle("dark-mode");
 })
    
+
+
+
 
 
 
