@@ -1,10 +1,10 @@
 let for_search = document.querySelector("#for_search")
-let images=document.getElementsByClassName("images")
-let container=document.getElementsByClassName("container")
+//let images=document.getElementsByClassName("images")
+//let container=document.getElementsByClassName("container")
 let button2=document.getElementById("buttonn")
 let for_h2=document.querySelector(".for_h2")
 let button=document.getElementById("button")
-let img=document.getElementsByClassName("img")[0]
+let pics=document.getElementsByClassName("pics")[0]
 
 for_search.addEventListener("keydown",function(event){
     if(event.key==="Enter"){
@@ -14,8 +14,10 @@ for_search.addEventListener("keydown",function(event){
 
 function search(){
   removeImg()
-   // const url = 'https://api.unsplash.com/search/photos?query='+for_search.value+'&per_page=9&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo';
+    const url='https://api.unsplash.com/search/photos?query='+for_search.value+'&per_page=9&client_id=Wi9ASz8dTga7gGsfrhnGUnXFi5G5zOCRwp0-YeXOEZs';
+    
     fetch(url)
+    
     .then(response=>{
         if(response.ok)
         return response.json();
@@ -25,22 +27,21 @@ function search(){
     })
 
     .then(data=>{
-       let images=[];
+       const images=[];
         for(let i=0; i<data.results.length; i++){
             images[i]=document.createElement('div');
-            images[i].className="images";
-            images[i].style.backgroundImage="url('+data.results[i].urls.raw+')";
+            images[i].className="img";
+            images[i].style.backgroundImage='url('+data.results[i].urls.raw+')';
             images[i].addEventListener('dblclick',function(){
-                window.open(data.results[i].links.download,'_blank')
-            })
-            img.appendChild(images[i])
+             window.open(data.results[i].links.download,'_blank')})
+            pics.appendChild(images[i])
         }
     })
 }
 
 
 function removeImg(){
-    img.innerHTML="";
+    pics.innerHTML="";
 }
 
 /*
