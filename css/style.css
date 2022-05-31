@@ -10,12 +10,19 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Oleo Script Swash Caps', cursive;
     /*background-color: #ffccff;*/
+    /*
     background-image: url(../img/1.gif);
     background-size:100%;
+    height:100%;
     background-position: repeat-y;
     background-attachment: fixed;
+    
+*/
 
+background-image: linear-gradient(to right, #dab3ff,#ffccff,#ce99ff,#ffb3ff,#ffccff,#dab3ff);
 }
+     
+
 
 .for_h2 {
     background: -webkit-linear-gradient(#ffccff, #ffffff);
@@ -40,7 +47,9 @@ body {
   
 }
 
-
+input, textarea {
+    background-color: rgba(168, 161, 161, 0.404);;
+  }
 #for_search {
     width: 150px;
     height: 55px;
@@ -175,15 +184,16 @@ header {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    
 }
 
 .img{
-   
+    object-fit: contain;
     width:380px;
-    height:380px; 
-    margin-top: 100px;
-    background-size: cover;
-    border-radius: 100px;
+    height:400px; 
+    margin-top: 20px;
+    
+    
    
 
 }

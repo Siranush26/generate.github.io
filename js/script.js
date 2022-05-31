@@ -29,15 +29,17 @@ function search(){
     .then(data=>{
        const images=[];
         for(let i=0; i<data.results.length; i++){
-            images[i]=document.createElement('div');
+            images[i]=document.createElement('img');
             images[i].className="img";
-            images[i].style.backgroundImage='url('+data.results[i].urls.raw+')';
+            // images[i].style.backgroundImage='url('+data.results[i].urls.raw+')';   
+            images[i].loading = "lazy" 
+            images[i].src=data.results[i].urls.raw;    
             images[i].addEventListener('dblclick',function(){
              window.open(data.results[i].links.download,'_blank')})
             pics.appendChild(images[i])
         }
     })
-}
+    }
 
 
 function removeImg(){
@@ -78,7 +80,7 @@ button2.addEventListener("click", ()=>{
     let element=document.body
     element.classList.toggle("dark-mode");
 })
-   
+  
 
 
 
