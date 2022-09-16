@@ -19,13 +19,13 @@ body {
     
 */
 
-background-image: linear-gradient(to right, #dab3ff,#ffccff,#ce99ff,#ffb3ff,#ffccff,#dab3ff);
+background-color:#dab3ff;
 }
      
 
 
 .for_h2 {
-    background: -webkit-linear-gradient(#ffccff, #ffffff);
+    background: -webkit-linear-gradient(#ffccff 60%, #ffffff 40%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -48,7 +48,8 @@ background-image: linear-gradient(to right, #dab3ff,#ffccff,#ce99ff,#ffb3ff,#ffc
 }
 
 input, textarea {
-    background-color: rgba(168, 161, 161, 0.404);;
+    /*background-color: rgba(168, 161, 161, 0.404);*/
+    background-color: #eee;
   }
 #for_search {
     width: 150px;
@@ -131,7 +132,7 @@ input:focus {
 
 header {
 
-    border-bottom: 3px solid #9933ff;
+    border-bottom: 3px solid #ff99ff;
 }
 
 
