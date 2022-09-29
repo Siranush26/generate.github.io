@@ -30,9 +30,9 @@ function search(){
        const images=[];
         for(let i=0; i<data.results.length; i++){
             images[i]=document.createElement('img');
-            images[i].className="img";
+            images[i].className="image";
             // images[i].style.backgroundImage='url('+data.results[i].urls.raw+')';   
-            images[i].loading = "lazy" 
+            images[i].loading = "lazy" ;
             images[i].src=data.results[i].urls.raw;    
             images[i].addEventListener('dblclick',function(){
              window.open(data.results[i].links.download,'_blank')})
